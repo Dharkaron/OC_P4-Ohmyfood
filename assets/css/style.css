@@ -258,7 +258,7 @@ body {
   background-color: #353535;
   padding: 20px 20px 30px 20px;
 }
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
     align-items: center;
@@ -273,7 +273,7 @@ body {
   padding: 20px 0;
   filter: invert(1);
 }
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .footer__logo {
     padding: 20px;
   }
@@ -285,7 +285,7 @@ body {
   color: white;
   gap: 10px;
 }
-@media (min-width: 769px) {
+@media (min-width: 1024px) {
   .footer__links {
     flex-direction: row;
     align-items: flex-end;

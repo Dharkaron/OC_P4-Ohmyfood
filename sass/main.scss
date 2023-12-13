@@ -306,7 +306,7 @@ body {
     background-color: $darker_grey;
     padding: 20px 20px 30px 20px;
 
-    @media (min-width:769px){
+    @media (min-width:1024px){
         flex-direction: row-reverse;
         align-items: center;
         justify-content: flex-start;
@@ -320,7 +320,7 @@ body {
         padding: 20px 0;
         filter: invert(1);
 
-        @media (min-width:769px){
+        @media (min-width:1024px){
             padding: 20px;
         }
     }
@@ -331,7 +331,7 @@ body {
         color: $white;
         gap: 10px;
 
-        @media (min-width:769px){
+        @media (min-width:1024px){
             flex-direction: row;
             align-items: flex-end;
         }
