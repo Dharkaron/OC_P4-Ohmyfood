@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+				crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" href="./assets/css/style.css">
+		<title>Oh my food</title>
+		
+	</head>
+
+	<body>
+		<div class="webpage__container">
+
+			
+			<header class="headerbar">
+				<img class="headerbar__logo" src="./assets/images/logo/ohmyfood.png" alt="ohmyfood, réservation de menu en ligne">				
+			</header>
+
+			<main class="main__wrapper">
+				
+				<div class="location">
+					<span class="fa-solid fa-location-dot fa-lg"></span>
+					<p class="location__text">Paris, Belleville</p>
+				</div>
+					
+				<section class="Hero">
+					<div class="Hero__title">
+						<h1>Réservez le menu qui vous convient</h1>
+						<p>Découvrez des restaurants d'exceptions, sélectionnés par nos soins.</p>
+					</div>
+					<a href="#section__restaurants" class="Hero__button">Explorer nos restaurants</a>						
+				</section>
+
+				
+
+				<!--¤ Essaie en Display:grid pour les card, et flex pour le contenu -->
+				<section class="explanation">
+
+					<h2 class="explanation__title">Fonctionnement</h2>
+
+					<div class="explanation__flexbox">
+						<div class="explanation__flexbox__card">
+							<span class="explanation__flexbox__card__number">1</span>
+							<span class="explanation__flexbox__card__icon fa-lg fa-solid fa-mobile-screen-button"></span>					
+							<p class="explanation__flexbox__card__text">Choisissez un restaurant</p>					
+						</div>
+	
+						<div class="explanation__flexbox__card">
+							<span class="explanation__flexbox__card__number">2</span>
+							<span class="explanation__flexbox__card__icon fa-lg fa-solid fa-list"></span>
+							<p class="explanation__flexbox__card__text">Composez votre menu</p>
+						</div>
+	
+						<div class="explanation__flexbox__card">
+							<span class="explanation__flexbox__card__number">3</span>
+							<span class="explanation__flexbox__card__icon--purple fa-lg fa-solid fa-store"></span>
+							<p class="explanation__flexbox__card__text">Dégustez au restaurant</p>
+						</div>
+					</div>
+			
+				</section>
+
+
+
+				<!--// Cartes des restaurants = lien vers les pages correspondantes -->
+				<section class="restaurants" id="section__restaurants">
+
+					<h2 class="restaurants__title">Restaurants</h2>
+					
+					<div class="restaurants__flexbox">
+						<article class="restaurants__flexbox__card">
+							<img class="restaurants__flexbox__card__img" src="./assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="carte restaurant la palette du goût">
+							<p class="restaurants__flexbox__card__new">Nouveau</p>
+							<div class="restaurants__flexbox__card__content">
+								<div class="restaurants__flexbox__card__content__text">
+									<h3>La palette du goût</h3>
+									<a href="./restaurants/la_palette_du_gout.html">Ménilmontant</a><!-- ::before en pos absolute -->
+								</div>
+								<span class="restaurants__flexbox__card__content__heart fa-regular fa-heart fa-2xl"></span><!-- à remplacer par svg? -->
+							</div>
+						</article>
+										
+						<article class="restaurants__flexbox__card">
+							<img class="restaurants__flexbox__card__img" src="./assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="carte restaurant la note enchantée">
+							<p class="restaurants__flexbox__card__new">Nouveau</p>
+							<div class="restaurants__flexbox__card__content">
+								<div class="restaurants__flexbox__card__content__text">
+									<h3>La note enchantée</h3>
+									<a href="./restaurants/la_note_enchantee.html">Charonne</a>
+								</div>
+								<span class="restaurants__flexbox__card__content__heart fa-regular fa-heart fa-2xl"></span>
+							</div>
+						</article>
+										
+						<article class="restaurants__flexbox__card">
+							<img class="restaurants__flexbox__card__img" src="./assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="carte restaurant à la française">
+							<div class="restaurants__flexbox__card__content">
+								<div class="restaurants__flexbox__card__content__text">
+									<h3>À la française</h3>
+									<a href="./restaurants/a_la_française.html">Cité Rouge</a>
+								</div>
+								<span class="restaurants__flexbox__card__content__heart fa-regular fa-heart fa-2xl"></span>
+							</div>
+						</article>
+										
+						<article class="restaurants__flexbox__card">
+							<img class="restaurants__flexbox__card__img" src="./assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="carte restaurant le délice des sens">
+							<div class="restaurants__flexbox__card__content">
+								<div class="restaurants__flexbox__card__content__text">
+									<h3>Le délice des sens</h3>
+									<a href="./restaurants/le_delice_des_sens.html">Folie-Méricourt</a>
+								</div>
+								<span class="restaurants__flexbox__card__content__heart fa-regular fa-heart fa-2xl"></span>
+							</div>
+						</article>
+					</div>
+					
+				</section>
+
+			</main>	
+
+			<!--// Logo du site, liens-->			
+			<footer class="footer">
+				<img class="footer__logo" src="./assets/images/logo/ohmyfood.png" alt="ohmyfood, réservation de menu en ligne"><!-- possible usage de svg pour le logo en blanc -->
+				<ul class="footer__links">
+					<li class="footer__links--bold">
+						<span class="fa-solid fa-utensils"></span>
+						<a href="#">Proposer un restaurant</a>
+					</li>
+					<li class="footer__links--bold">
+						<span class="fa-solid fa-handshake-angle"></span>
+						<a href="#">Devenir partenaire</a>
+					</li>
+					<li class="footer__links--simple">
+						<a href="#">Mentions légales</a>
+					</li>
+					<li class="footer__links--simple">
+						<a href="#">Contact</a>
+					</li>
+				</ul>
+
+			</footer>
+
+		</div>
+	</body>
+
+</html>

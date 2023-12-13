@@ -1,0 +1,31 @@
+/**************** Colors ******************/
+
+$purple:rgb(147,86,220);
+
+$pink:rgb(255,121,218);
+
+$navy_blue:#003A68;
+
+$cyan:#89C8FA;
+
+$green:#008766;
+
+$light_green:#99E2D0;
+
+$grey:#EAEAEA;
+
+$light_grey:#F6F6F6;
+
+$dark_grey:#7E7E7E;
+
+$darker_grey:#353535;
+
+$white:white;
+
+$faded_purple:rgba(147,86,220,0.8);
+
+$faded_pink:rgba(255,121,218,0.8);
+
+$btn-background:linear-gradient(0deg, $purple, $pink);
+
+$btn-background--light:linear-gradient(0deg, $faded_purple, $faded_pink);

@@ -1,0 +1,343 @@
+@use "./Utils/variables" as *;
+
+
+
+
+/******************************** Général ************************************/
+
+
+
+* {
+    font-family: 'roboto';
+}
+
+h1,h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+h1,h2,h3,p,a {
+    padding: 0;
+    margin: 0;
+}
+
+ol,ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* **************************************************** */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.webpage__container {
+    max-width: 768px;
+    width: 100%;
+    box-sizing: border-box;
+        
+    @media (min-width:769px) {
+        max-width:none;
+    }  
+}
+
+.main__wrapper {
+    padding: 0;
+    display: block;
+}
+
+
+
+
+
+/******************** header********************************** */
+
+.headerbar {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 63px;
+    width: 100%;
+    margin: 0;
+    box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15);
+    position:relative;
+    z-index: 2;
+
+    .headerbar__logo {
+        width: 197px;
+        height: 36px;
+        padding-top: 14px;
+    }
+}
+
+
+
+/************** localisation et bouton de recherche *****************/
+
+.location{
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    gap: 17px;
+    margin: 0;
+    
+
+    .location__text{
+        font-size:16px;
+        font-weight: 500;
+        cursor:default;
+    }
+}
+
+.Hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    margin: 0;
+    padding: 20px 0 50px 0;
+    gap: 20px;
+    background-color: $light_grey; 
+    width: 100%;
+    
+    .Hero__title{
+        text-align:center;
+    }
+    .Hero__button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 218px;
+        border-radius: 25px ;
+        color: white ;
+        font-size: 16px;
+        font-weight: 500;
+        background:$btn-background;
+        box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+            background:$btn-background--light;
+        }
+    }
+}
+
+
+
+
+
+/*************************** fonctionnement du site *********************/
+
+.explanation {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 60px 20px;
+    gap: 20px;
+
+    
+    .explanation__title {
+        align-self: flex-start;       
+    }
+    .explanation__flexbox{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 100%;
+        
+
+        @media (min-width:769px) {
+            flex-direction: row;
+        }    
+            
+        &__card {
+            position: relative;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;                     
+            padding-left: 40px;
+            padding-right: 20px;
+            border-radius: 20px;            
+            background-color: $light_grey;
+            height: 72px;
+            gap: 25px;
+            box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
+
+            @media (min-width:769px) {
+                flex: 1 1 30%;
+            }
+
+            &__number {
+                position: absolute;
+                left: -12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color:$purple;
+                height: 24px;
+                width: 24px;
+                border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+                color: white;
+            }
+            &__icon {
+                color: $dark_grey;
+            }
+            &__icon--purple {
+                color: $purple;
+            }
+            &__text {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* Cartes de restaurants */
+
+.restaurants {
+    background-color: $light_grey;
+    padding: 60px 20px;
+    
+    
+    &__title {
+        padding-bottom: 20px;
+    }
+
+    &__flexbox{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+
+        @media (min-width:769px) {
+            flex-flow: row wrap;
+            column-gap: 60px;            
+        } 
+
+        &__card{
+            position: relative;
+            background-color: $white;
+            border-radius: 15px;
+            flex: 1 1 40%;
+
+            &__img{
+                object-fit: cover;
+                width: 100%;
+                height: 231px;
+                border-radius: 15px 15px 0 0;
+                z-index: 1;
+            }
+            &__new{
+                position: absolute;
+                z-index: 2;
+                top: 8px;
+                right: 20px;
+                font-size: 14px;
+                font-weight: 500;
+                color: $green;
+                background-color: $light_green;
+                width: 80px;
+                height: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 2px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+            }            
+            &__content{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;                
+
+                &__text{
+                    gap: 0;
+                    a{
+                        font-size: 17px;
+                        font-weight: 300;
+                    }
+                }
+                
+            }
+        }
+    }
+
+
+}
+
+
+
+
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: $darker_grey;
+    padding: 10px 0 30px 20px;
+
+    &__logo {
+        width: 139px;
+        height: 27px;
+        padding: 20px 0;
+        filter: invert(1);
+    }
+    &__links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        color: $white;
+        gap: 10px;
+        
+        &--bold {
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: flex-start;
+            gap: 12px;
+        }
+        &--simple {
+            font-size: 16px;
+            font-weight: 300;
+        }
+        
+    }
+}
+
+
+
+
