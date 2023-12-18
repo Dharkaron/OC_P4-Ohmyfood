@@ -53,11 +53,29 @@ ol,ul{
 }
 
 
+/***** Heart Animation ************************/
+
+
 .fa-heart{
-    z-index: 2;
-    transition: transform 500ms;
+    display:block;
+    position:absolute;
+    top:center;
+    left:center;    
+} 
+
+.heart--solid{
+    opacity:0;
+    z-index:2;
+    color:transparent;
+    line-height:1;
+    background:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) border-box text;
+    /* respectivement background-image, background-origin, background-clip  */
+    
     &:hover{
-        transform:scale(0.8);
+      opacity:1;
+      }
+    &:hover + .heart--regular{
+      opacity:0;
     }
 }
 
@@ -121,7 +139,7 @@ body {
 
 
 
-/************** localisation et bouton de recherche *****************/
+/************** localisation et bouton de navigation *****************/
 
 .location{
     background-color: $grey;
@@ -170,7 +188,10 @@ body {
         font-weight: 500;
         background:$btn-background;
         box-shadow:0px 4px 10px rgba(0, 0, 0, 0.25);
-        
+
+    /* Pseudo-element "after" & "before" ajoutés au code, activés 
+    sur 'hover' avec la propriété 'opacity', pour des questions 
+    de performances */    
         &:hover{
             &::after{
               opacity:1;
@@ -366,7 +387,7 @@ body {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
-                align-items: center;
+                align-items: center;                
                 padding: 10px 20px;
                 
                 &__text{
@@ -382,6 +403,13 @@ body {
                             height: 100%;
                             width: 100%;
                         } 
+                }
+                &__heart{
+                    display:flex;
+                    justify-content:center;
+                    align-items:center;
+                    position:relative;
+                    padding-right:10px;
                 }
             }
         }
@@ -462,4 +490,25 @@ body {
 
 /******** Pages de Menu des restaurants *************************/
 
+.menu__title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 
+    & > h1{
+        font-family: "shrikhand";
+        font-size: 28px;
+        font-weight: 400;
+    }
+
+    /* Doublon des cartes de index */
+    &__heart{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        position:relative;
+        
+    }
+}
