@@ -28,4 +28,5 @@ $faded_pink:rgba(255,121,218,0.8);
 
 $btn-background:linear-gradient(0deg, $purple, $pink);
 
-$btn-background--light:linear-gradient(0deg, $faded_purple, $faded_pink);
+$btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5));
+/* $btn-background--light:linear-gradient(0deg, $faded_purple, $faded_pink); */
