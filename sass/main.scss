@@ -6,8 +6,6 @@
 
 /******************************** Général ************************************/
 
-
-
 * {
     font-family: 'roboto', 'shrikhand';
 
@@ -70,20 +68,22 @@ ol,ul{
     color:transparent;
     line-height:1;
     background:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) border-box text;
-    /* respectivement background-image, background-origin, background-clip  */
     
     &:hover{
-      opacity:1;
+        opacity:1;
+        }
+      &:hover + .heart--regular{
+        opacity:0;
       }
-    &:hover + .heart--regular{
-      opacity:0;
-    }
+      
 }
 
 
 /** Loader *********************/
 
-   
+
+
+
 
 
 
@@ -121,7 +121,9 @@ body {
     height: 63px;
     margin: 0;
     box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15);
-    position:relative;
+    position:sticky;
+    top: 0;
+    background-color: $white;
     z-index: 2;
 
     .headerbar__logo {
@@ -191,7 +193,7 @@ body {
     /* Pseudo-element "after" & "before" ajoutés au code, activés 
     sur 'hover' avec la propriété 'opacity', pour des questions 
     de performances */    
-        &:hover{
+        &:hover, &:focus{
             &::after{
               opacity:1;
             }

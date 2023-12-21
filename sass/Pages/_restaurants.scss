@@ -101,6 +101,9 @@
 
 
   .dishcard{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
     display: flex;
     flex-direction: row;   
     justify-content: space-between;
@@ -139,20 +142,43 @@
      padding-bottom: 15px;
      font-weight: 700;
      font-size: 15px;
+     transition:margin 800ms ease-in-out;
     }
 
-    &__check{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 60px;
-      height: 70px;
-      border-radius: 0 15px 15px 0;
-      margin-right: -60px;
+    &__check{       
+      position:absolute;
+      top:0;
+      bottom:0;
+      right:-70px;
+      width:70px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background: $light_green;
+      color: $white;
+      transition:transform 800ms ease-in-out;
       
+      .fa-check-circle{
+        transition: transform 1s ease-in-out;
+        animation: spinningOut 1s ease-out;
+      }
+      
+    }
+  
+    &:hover > .dishcard__check{
+      transform:translateX(-70px);
+    }
+    &:hover > .dishcard__price{
+      margin-right:70px;
+    }
+    &:hover > .dishcard__check .fa-check-circle{
+      animation:spinningIn 600ms 200ms both ease-in;
     }
   }
 }
+
+
+
 
 /* Bouton "Commander" */
 

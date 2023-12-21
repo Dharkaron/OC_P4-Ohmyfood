@@ -30,3 +30,40 @@ $btn-background:linear-gradient(0deg, $purple, $pink);
 
 $btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5));
 /* $btn-background--light:linear-gradient(0deg, $faded_purple, $faded_pink); */
+
+
+
+
+/* Keyframes */
+
+/* Carte des menus restaurants */
+
+@keyframes spinningIn {
+  0% {
+    transform: rotate(360deg);    
+    opacity:0;
+  }
+  25%{
+    transform: rotate(180deg);    
+    opacity:0.5;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity:1;
+  }
+}
+
+@keyframes spinningOut {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;    
+  }
+  75% {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;    
+  }
+}
