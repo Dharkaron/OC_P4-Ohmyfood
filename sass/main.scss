@@ -57,9 +57,7 @@ ol,ul{
 
 .fa-heart{
     display:block;
-    position:absolute;
-    top:center;
-    left:center;    
+    position:absolute;       
 } 
 
 .heart--solid{
@@ -67,8 +65,9 @@ ol,ul{
     z-index:2;
     color:transparent;
     line-height:1;
-    background:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) border-box text;
-    
+    background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+    background-origin: border-box;
+    background-clip: text;
     &:hover{
         opacity:1;
         }
