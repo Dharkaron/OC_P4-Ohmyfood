@@ -193,7 +193,7 @@ body {
     /* Pseudo-element "after" & "before" ajoutés au code, activés 
     sur 'hover' avec la propriété 'opacity', pour des questions 
     de performances */    
-        &:hover, &:focus{
+        &:hover, &:active{
             &::after{
               opacity:1;
             }
@@ -234,7 +234,7 @@ body {
 
 
 
-/*************************** fonctionnement du site *********************/
+/**************** fonctionnement du site *********************/
 
 .explanation {
     box-sizing: border-box;
@@ -243,9 +243,10 @@ body {
     padding: 60px 20px;
     gap: 20px;
 
-    @media (min-width:1024px){
-        padding: 60px 120px;
-    }
+    @media (min-width:769px){   
+        max-width: 1200px;
+        margin:0 auto; 
+      }
    
     .explanation__title {
         align-self: flex-start;
@@ -310,13 +311,17 @@ body {
 
 /* Cartes de restaurants */
 
+.section__background--color{
+    background-color: $light_grey;   
+}
+
 .restaurants {
-    background-color: $light_grey;
     padding: 60px 30px;
-    
-    @media (min-width:1024px){
-        padding: 60px 120px;
-    }
+
+    @media (min-width:769px){   
+        max-width: 1160px;
+        margin:0 auto; 
+      }
     
     &__title {
         padding-bottom: 28px;

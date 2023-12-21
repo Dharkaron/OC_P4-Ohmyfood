@@ -34,7 +34,7 @@ $btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5
 
 
 
-/* Keyframes */
+/************** Keyframes *********************/
 
 /* Carte des menus restaurants */
 
@@ -65,5 +65,31 @@ $btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5
   100% {
     transform: rotate(360deg);
     opacity: 0;    
+  }
+}
+
+// aparition progressive des cartes des menus
+
+@keyframes crescendo {
+  0% {
+    opacity: 0;
+    transform:translateY(100%);
+  }
+  25%{
+    opacity: 0.25;
+    transform:translateY(75%);
+  }
+  50% {
+    opacity: 0.5;
+    transform:translateY(50%);
+  }
+  75%{
+    opacity: 0.75;
+    transform:translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform:translateY(0);
+    
   }
 }

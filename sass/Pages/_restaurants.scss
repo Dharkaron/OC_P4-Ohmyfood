@@ -10,7 +10,7 @@
   height: 275px;
   object-fit: cover;
   
-  @media (min-width:1024px){
+  @media (min-width:769px){
     height: 383px;
   }
 }
@@ -28,12 +28,13 @@
   gap: 40px;
   margin: -50px 0 0 0;
   padding: 50px 50px;
+  
 
-  @media (min-width:769px){
-    margin: -50px 150px 0 150px;
-  }
-  @media (min-width:1024px){
-    padding: 50px 200px;
+  @media (min-width:769px){   
+    max-width: 1055px;
+    margin:-50px auto 0 auto;
+    padding: 50px 150px;
+    box-sizing: border-box; 
   }
 }
 
@@ -97,7 +98,7 @@
 .menu__list{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 
 
   .dishcard{
@@ -177,6 +178,16 @@
   }
 }
 
+/* aparition progressive des cartes */
+.dishcard{
+  animation: crescendo 800ms linear both;
+    opacity:0;
+      @for $i from 1 through 4 {
+   &--#{$i} {
+     animation-delay: 300ms * $i;
+   }
+ }
+}
 
 
 

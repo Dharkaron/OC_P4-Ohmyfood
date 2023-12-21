@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /**************** Colors ******************/
 /* $btn-background--light:linear-gradient(0deg, $faded_purple, $faded_pink); */
-/* Keyframes */
+/************** Keyframes *********************/
 /* Carte des menus restaurants */
 @keyframes spinningIn {
   0% {
@@ -31,13 +31,35 @@
     opacity: 0;
   }
 }
+@keyframes crescendo {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  25% {
+    opacity: 0.25;
+    transform: translateY(75%);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(50%);
+  }
+  75% {
+    opacity: 0.75;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*************** Image de fond du restaurant **************/
 .background__img {
   width: 100%;
   height: 275px;
   object-fit: cover;
 }
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .background__img {
     height: 383px;
   }
@@ -56,12 +78,10 @@
 }
 @media (min-width: 769px) {
   .menu {
-    margin: -50px 150px 0 150px;
-  }
-}
-@media (min-width: 1024px) {
-  .menu {
-    padding: 50px 200px;
+    max-width: 1055px;
+    margin: -50px auto 0 auto;
+    padding: 50px 150px;
+    box-sizing: border-box;
   }
 }
 
@@ -114,7 +134,7 @@
 .menu__list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 .menu__list .dishcard {
   position: relative;
@@ -182,6 +202,24 @@
 }
 .menu__list .dishcard:hover > .dishcard__check .fa-check-circle {
   animation: spinningIn 600ms 200ms both ease-in;
+}
+
+/* aparition progressive des cartes */
+.dishcard {
+  animation: crescendo 800ms linear both;
+  opacity: 0;
+}
+.dishcard--1 {
+  animation-delay: 300ms;
+}
+.dishcard--2 {
+  animation-delay: 600ms;
+}
+.dishcard--3 {
+  animation-delay: 900ms;
+}
+.dishcard--4 {
+  animation-delay: 1200ms;
 }
 
 /* Bouton "Commander" */
@@ -387,10 +425,10 @@ body {
   sur 'hover' avec la propriété 'opacity', pour des questions 
   de performances */
 }
-.Hero .Hero__button:hover::after, .Hero .Hero__button:focus::after {
+.Hero .Hero__button:hover::after, .Hero .Hero__button:active::after {
   opacity: 1;
 }
-.Hero .Hero__button:hover::before, .Hero .Hero__button:focus::before {
+.Hero .Hero__button:hover::before, .Hero .Hero__button:active::before {
   opacity: 1;
 }
 .Hero .Hero__button::after {
@@ -420,7 +458,7 @@ body {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
 }
 
-/*************************** fonctionnement du site *********************/
+/**************** fonctionnement du site *********************/
 .explanation {
   box-sizing: border-box;
   display: flex;
@@ -428,9 +466,10 @@ body {
   padding: 60px 20px;
   gap: 20px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .explanation {
-    padding: 60px 120px;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 }
 .explanation .explanation__title {
@@ -490,13 +529,17 @@ body {
 }
 
 /* Cartes de restaurants */
-.restaurants {
+.section__background--color {
   background-color: #F6F6F6;
+}
+
+.restaurants {
   padding: 60px 30px;
 }
-@media (min-width: 1024px) {
+@media (min-width: 769px) {
   .restaurants {
-    padding: 60px 120px;
+    max-width: 1160px;
+    margin: 0 auto;
   }
 }
 .restaurants__title {
