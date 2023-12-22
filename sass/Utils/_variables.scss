@@ -93,3 +93,42 @@ $btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5
     
   }
 }
+
+
+// Animations des Coeurs 
+
+
+/*animation beating heart*/
+@keyframes pulse {
+  0% {
+     transform: scale(1);       
+  }
+  50% {
+     transform: scale(1.5);       
+  }
+}
+
+
+/*animation heart fill - in & out*/
+@keyframes fill-in {
+  0% {
+     transform: scale(1);
+  }
+  50% {
+     transform: scale(1.2);
+  }
+  100%{
+     transform:scale(1);
+  }
+}
+
+@keyframes fill-out {
+  0% {
+     transform: scale(1);
+     opacity:1;
+  }
+  50% {
+     transform: scale(0.5);
+     opacity:0;
+  }   
+}
