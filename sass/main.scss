@@ -55,28 +55,6 @@ ol,ul{
 /***** Heart Animation ************************/
 
 
-/* .fa-heart{
-    display:block;
-    position:absolute;       
-} 
-
-.heart--solid{
-    opacity:0;
-    z-index:2;
-    color:transparent;
-    line-height:1;
-    background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    background-origin: border-box;
-    background-clip: text;
-    &:hover{
-        opacity:1;
-        }
-      &:hover + .heart--regular{
-        opacity:0;
-      }
-      
-} */
-
 .hidden{
     display:none;
 }
@@ -89,49 +67,50 @@ ol,ul{
     width: 40px;
     height: 40px;
         
-.fa-heart{
-    display:block;
-    position:absolute;
-}
+    .fa-heart{
+        display:block;
+        position:absolute;
+    }
       
-.heart--regular{
-    transform-origin:center bottom;
-    z-index:2;
-    }
-.heart--solid{
-    opacity:0;
-    z-index:3;
-    color:transparent;
-    line-height:1;
-    transition:opacity 0ms;
-    background:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) border-box text;
-    //background-image, background-origin, background-clip
-    filter:drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-    transform-origin:center bottom;
-             
-    &:hover + .heart--regular{
-        animation:pulse 1s infinite both;
+    .heart--regular{
         transform-origin:center bottom;
-    }
-           
-}   
+        z-index:2;
+        }
+    .heart--solid{
+        opacity:0;
+        z-index:3;
+        color:transparent;
+        line-height:1;
+        transition:opacity 0ms;
+        background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+        background-origin:border-box;
+        background-clip:text;
+        filter:drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+        transform-origin:center bottom;
+                
+        &:hover + .heart--regular{
+            animation:pulse 1s infinite both;
+            transform-origin:center bottom;
+        }
+            
+    }   
 }
   
    
 //     Input check 
   
-  input:checked ~ .heart--regular{
+  .heart__like input:checked ~ .heart--regular{
     opacity:0;
   }
-  input:checked ~ .heart--solid{
+  .heart__like input:checked ~ .heart--solid{
     opacity:1;
     animation:fill-in 500ms both;
   }
   
-  input:not(:checked) ~ .heart--regular{
+  .heart__like input:not(:checked) ~ .heart--regular{
     opacity:1;
   }
-  input:not(:checked) ~ .heart--solid{
+  .heart__like input:not(:checked) ~ .heart--solid{
     animation:fill-out 500ms forwards;
   }
   
@@ -473,14 +452,6 @@ body {
                             width: 100%;
                         } 
                 }
-                /* &__heart{
-                    display:flex;
-                    justify-content:center;
-                    align-items:center;
-                    position:relative;
-                    padding-right:10px;
-                    
-                } */
             }
         }
     }
@@ -555,8 +526,4 @@ body {
         }
     }
 }
-
-
-
-/******** Pages de Menu des restaurants *************************/
 

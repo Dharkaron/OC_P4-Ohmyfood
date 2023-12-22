@@ -181,13 +181,13 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__list .dishcard__content > h3 {
+.menu__list .dishcard__content__title {
   font-size: 18px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__list .dishcard__content > p {
+.menu__list .dishcard__content__subtitle {
   font-size: 15px;
   font-weight: 300;
   overflow: hidden;
@@ -218,14 +218,17 @@
   transition: transform 1s ease-in-out;
   animation: spinningOut 1s ease-out;
 }
-.menu__list .dishcard:hover > .dishcard__check {
+
+.dishcard input:checked ~ .dishcard__check {
   transform: translateX(-70px);
 }
-.menu__list .dishcard:hover > .dishcard__price {
+
+.dishcard input:checked ~ .dishcard__price {
   margin-right: 70px;
 }
-.menu__list .dishcard:hover > .dishcard__check .fa-check-circle {
-  animation: spinningIn 600ms 200ms both ease-in;
+
+.dishcard input:checked ~ .dishcard__check .fa-check-circle {
+  animation: spinningIn 700ms 200ms both ease-in;
 }
 
 /* aparition progressive des cartes */
@@ -339,27 +342,6 @@ ol, ul {
 }
 
 /***** Heart Animation ************************/
-/* .fa-heart{
-    display:block;
-    position:absolute;       
-} 
-
-.heart--solid{
-    opacity:0;
-    z-index:2;
-    color:transparent;
-    line-height:1;
-    background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-    background-origin: border-box;
-    background-clip: text;
-    &:hover{
-        opacity:1;
-        }
-      &:hover + .heart--regular{
-        opacity:0;
-      }
-
-} */
 .hidden {
   display: none;
 }
@@ -386,7 +368,9 @@ ol, ul {
   color: transparent;
   line-height: 1;
   transition: opacity 0ms;
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%) border-box text;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+  background-origin: border-box;
+  background-clip: text;
   filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
   transform-origin: center bottom;
 }
@@ -395,20 +379,20 @@ ol, ul {
   transform-origin: center bottom;
 }
 
-input:checked ~ .heart--regular {
+.heart__like input:checked ~ .heart--regular {
   opacity: 0;
 }
 
-input:checked ~ .heart--solid {
+.heart__like input:checked ~ .heart--solid {
   opacity: 1;
   animation: fill-in 500ms both;
 }
 
-input:not(:checked) ~ .heart--regular {
+.heart__like input:not(:checked) ~ .heart--regular {
   opacity: 1;
 }
 
-input:not(:checked) ~ .heart--solid {
+.heart__like input:not(:checked) ~ .heart--solid {
   animation: fill-out 500ms forwards;
 }
 
@@ -687,14 +671,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  /* &__heart{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      position:relative;
-      padding-right:10px;
-
-  } */
 }
 .restaurants__flexbox__card__content__text {
   gap: 0;
@@ -773,7 +749,5 @@ body {
   font-size: 16px;
   font-weight: 300;
 }
-
-/******** Pages de Menu des restaurants *************************/
 
 /*# sourceMappingURL=style.css.map */

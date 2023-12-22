@@ -114,14 +114,14 @@
       gap:5px;
       overflow: hidden;
       white-space: nowrap;
-      & > h3{
+      &__title{
         font-size: 18px;
         font-weight: 500;
         overflow: hidden;
         text-overflow: ellipsis;
         
       }
-      & > p{
+      &__subtitle{
         font-size:15px ;
         font-weight: 300;
         overflow: hidden;
@@ -154,21 +154,24 @@
       .fa-check-circle{
         transition: transform 1s ease-in-out;
         animation: spinningOut 1s ease-out;
-      }
-      
-    }
-  
-    &:hover > .dishcard__check{
-      transform:translateX(-70px);
-    }
-    &:hover > .dishcard__price{
-      margin-right:70px;
-    }
-    &:hover > .dishcard__check .fa-check-circle{
-      animation:spinningIn 600ms 200ms both ease-in;
+      }  
     }
   }
 }
+
+//     Input check     //
+
+.dishcard input:checked ~ .dishcard__check{
+  transform:translateX(-70px);
+}
+.dishcard input:checked ~ .dishcard__price{
+  margin-right:70px;
+}
+
+.dishcard input:checked ~ .dishcard__check .fa-check-circle{
+  animation:spinningIn 700ms 200ms both ease-in;
+}
+
 
 /* aparition progressive des cartes */
 .dishcard{
