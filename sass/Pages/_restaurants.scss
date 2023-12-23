@@ -176,8 +176,8 @@
 /* aparition progressive des cartes */
 .dishcard{
   animation: crescendo 800ms linear both;
-    opacity:0;
-      @for $i from 1 through 4 {
+  opacity:0;
+  @for $i from 1 through 4 {
    &--#{$i} {
      animation-delay: 300ms * $i;
    }

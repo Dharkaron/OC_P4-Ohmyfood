@@ -5,6 +5,21 @@
 
 
 /******************************** Général ************************************/
+:root{
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    min-width: 300px;
+    box-sizing: border-box;
+    
+}
+
+
 
 * {
     font-family: 'roboto', 'shrikhand';
@@ -54,11 +69,12 @@ ol,ul{
 
 /***** Heart Animation ************************/
 
-
+// input hidden
 .hidden{
     display:none;
 }
-  
+
+// Input 'selector/checkbox'
 .heart__like{ 
     display:flex;
     justify-content:center;
@@ -66,19 +82,39 @@ ol,ul{
     position: relative;
     width: 40px;
     height: 40px;
-        
+
+    // Input check & uncheck 
+    input:checked ~ .heart--regular{
+        opacity:0;
+    }
+    input:checked ~ .heart--solid{
+        opacity:1;
+        animation:fill-in 500ms both;
+    }
+    
+    input:not(:checked) ~ .heart--regular{
+        opacity:1;
+    }
+    input:not(:checked) ~ .heart--solid{
+        animation:fill-out 500ms forwards;
+    }
+    
+
+    //  heart position  
     .fa-heart{
         display:block;
         position:absolute;
     }
-      
+    
+    // hearts styling
     .heart--regular{
         transform-origin:center bottom;
         z-index:2;
+        opacity:1;
         }
     .heart--solid{
         opacity:0;
-        z-index:3;
+        z-index:2;
         color:transparent;
         line-height:1;
         transition:opacity 0ms;
@@ -86,68 +122,14 @@ ol,ul{
         background-origin:border-box;
         background-clip:text;
         filter:drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-        transform-origin:center bottom;
-                
-        &:hover + .heart--regular{
-            animation:pulse 1s infinite both;
-            transform-origin:center bottom;
-        }
-            
+        transform-origin:center bottom;           
     }   
 }
-  
-   
-//     Input check 
-  
-  .heart__like input:checked ~ .heart--regular{
-    opacity:0;
-  }
-  .heart__like input:checked ~ .heart--solid{
-    opacity:1;
-    animation:fill-in 500ms both;
-  }
-  
-  .heart__like input:not(:checked) ~ .heart--regular{
-    opacity:1;
-  }
-  .heart__like input:not(:checked) ~ .heart--solid{
-    animation:fill-out 500ms forwards;
-  }
-  
-  
-  
-
 
 
 
 
 /** Loader *********************/
-
-
-
-
-
-
-
-
-/* **************************************************** */
-
-:root{
-    scroll-behavior: smooth;
-}
-
-
-
-body {
-    margin: 0;
-    padding: 0;
-    min-width: 300px;
-    box-sizing: border-box;
-    
-}
-
-
-
 
 
 
@@ -166,7 +148,7 @@ body {
     position:sticky;
     top: 0;
     background-color: $white;
-    z-index: 2;
+    z-index: 3;
 
     .headerbar__logo {
         width: 197px;
