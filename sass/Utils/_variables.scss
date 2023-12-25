@@ -20,7 +20,7 @@ $dark_grey:#7E7E7E;
 
 $darker_grey:#353535;
 
-$white:white;
+$white:rgb(255,255,255);
 
 $faded_purple:rgba(147,86,220,0.8);
 
@@ -110,4 +110,36 @@ $btn-background--light:linear-gradient(0deg, lighten($purple,5), lighten($pink,5
      transform: scale(0.5);
      opacity:0;
   }   
+}
+
+// LOADER
+
+/* Animation du loader*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+
+
+/* Transition Loader > website*/
+@keyframes fadeOut {
+  0% {
+    opacity:1;
+  }
+  100% {
+    opacity:0;
+  }
+} 
+
+@keyframes load_fadeIn{
+    from{
+			opacity:0;
+    }
+    to{
+       opacity:1;
+	}
 }

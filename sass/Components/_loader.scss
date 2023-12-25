@@ -1,0 +1,21 @@
+@use "../Utils" as *;
+
+@mixin my-loader{
+  
+    position:fixed;
+    opacity:1;		
+    top:50%;
+    left:50%;
+    width: 48px;
+    height: 48px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    box-sizing:border-box;
+    border-radius:50%;
+    border: 5px solid black;
+    border-bottom-color: transparent;
+    border-right-color:transparent;	  
+    animation:spin 1s infinite linear, 
+      fadeOut 0.5s 2s linear forwards;
+}

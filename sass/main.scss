@@ -1,6 +1,6 @@
-@use "./Utils/variables" as *;
-@use "./Pages/restaurants" as *;
-
+@use "Utils" as *;
+@use "Pages" as *;
+@use "Components" as *;
 
 
 
@@ -94,6 +94,7 @@ ol,ul{
     
     input:not(:checked) ~ .heart--regular{
         opacity:1;
+        transition:opacity 200ms;
     }
     input:not(:checked) ~ .heart--solid{
         animation:fill-out 500ms forwards;
@@ -131,7 +132,14 @@ ol,ul{
 
 /** Loader *********************/
 
+.webpage__loader{
+    @include my-loader
+}
 
+.loaded {
+    opacity: 0;
+    animation:load_fadeIn 1s ease 2s forwards;
+}
 
 
 

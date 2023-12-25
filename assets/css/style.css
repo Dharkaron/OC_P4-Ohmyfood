@@ -66,6 +66,32 @@
     opacity: 0;
   }
 }
+/* Animation du loader*/
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Transition Loader > website*/
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes load_fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*************** Image de fond du restaurant **************/
 .background__img {
   width: 100%;
@@ -150,7 +176,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   height: 70px;
   border-radius: 15px;
   padding: 0 15px;
@@ -193,7 +219,7 @@
   justify-content: center;
   align-items: center;
   background: #99E2D0;
-  color: white;
+  color: rgb(255, 255, 255);
   transition: transform 800ms ease-in-out;
 }
 .menu__list .dishcard__check .fa-check-circle {
@@ -244,7 +270,7 @@
   width: 218px;
   margin-top: 10px;
   border-radius: 25px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 500;
   background: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
@@ -356,6 +382,7 @@ ol, ul {
 }
 .heart__like input:not(:checked) ~ .heart--regular {
   opacity: 1;
+  transition: opacity 200ms;
 }
 .heart__like input:not(:checked) ~ .heart--solid {
   animation: fill-out 500ms forwards;
@@ -383,6 +410,29 @@ ol, ul {
 }
 
 /** Loader *********************/
+.webpage__loader {
+  position: fixed;
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  width: 48px;
+  height: 48px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 5px solid black;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  animation: spin 1s infinite linear, fadeOut 0.5s 2s linear forwards;
+}
+
+.loaded {
+  opacity: 0;
+  animation: load_fadeIn 1s ease 2s forwards;
+}
+
 /******************** header********************************** */
 .headerbar {
   display: flex;
@@ -394,7 +444,7 @@ ol, ul {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   z-index: 3;
 }
 .headerbar .headerbar__logo {
@@ -450,7 +500,7 @@ ol, ul {
   width: 218px;
   margin-top: 10px;
   border-radius: 25px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 500;
   background: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
@@ -594,7 +644,7 @@ ol, ul {
 .restaurants__flexbox__card {
   position: relative;
   z-index: 1;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 15px;
   flex: 1 1 40%;
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.1);
@@ -704,7 +754,7 @@ ol, ul {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: white;
+  color: rgb(255, 255, 255);
   gap: 10px;
 }
 @media (min-width: 1024px) {
