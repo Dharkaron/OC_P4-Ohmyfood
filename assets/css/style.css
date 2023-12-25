@@ -345,8 +345,8 @@ a {
   color: inherit;
   scroll-snap-type: none;
   scroll-behavior: smooth;
-  font-size: 17px;
-  font-weight: 300;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 h1, h2, h3, p, a {
@@ -410,29 +410,14 @@ ol, ul {
 }
 
 /** Loader *********************/
-.webpage__loader {
-  position: fixed;
-  opacity: 1;
-  top: 50%;
-  left: 50%;
-  width: 48px;
-  height: 48px;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 5px solid black;
-  border-bottom-color: transparent;
-  border-right-color: transparent;
-  animation: spin 1s infinite linear, fadeOut 0.5s 2s linear forwards;
+/* .webpage__loader{
+    @include my-loader
 }
 
 .loaded {
-  opacity: 0;
-  animation: load_fadeIn 1s ease 2s forwards;
-}
-
+    opacity: 0;
+    animation:load_fadeIn 1s ease 2s forwards;
+} */
 /******************** header********************************** */
 .headerbar {
   display: flex;
@@ -699,6 +684,10 @@ ol, ul {
 .restaurants__flexbox__card__content__text {
   gap: 0;
 }
+.restaurants__flexbox__card__content__text a {
+  font-size: 17px;
+  font-weight: 300;
+}
 .restaurants__flexbox__card__content__text a::before {
   content: "";
   position: absolute;
@@ -723,8 +712,8 @@ ol, ul {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: flex-start;
-    padding: 40px 20px 10px 0px;
-    gap: 60px;
+    padding: 40px 60px 20px 0px;
+    gap: 80px;
   }
 }
 .footer__logo {
@@ -733,24 +722,7 @@ ol, ul {
   padding: 20px 0;
   filter: invert(1);
 }
-@media (min-width: 1024px) {
-  .footer__logo {
-    padding: 20px;
-  }
-}
-.footer__nav {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media (min-width: 1024px) {
-  .footer__nav {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 30px;
-  }
-}
-.footer__nav__links {
+.footer__links {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -758,18 +730,25 @@ ol, ul {
   gap: 10px;
 }
 @media (min-width: 1024px) {
-  .footer__nav__links {
+  .footer__links {
     flex-direction: row;
+    align-items: flex-end;
+  }
+  .footer__links--bold:nth-child(2) {
+    margin-right: 30px;
   }
 }
-.footer__nav__links--bold {
+.footer__links--bold {
   font-size: 16px;
   font-weight: 500;
   display: flex;
   justify-content: flex-start;
   gap: 12px;
 }
-.footer__nav__links--simple {
+.footer__links--bold .fa-solid {
+  width: 16px;
+}
+.footer__links--simple {
   font-size: 16px;
   font-weight: 300;
 }
