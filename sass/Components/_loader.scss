@@ -1,7 +1,6 @@
 @use "../Utils" as *;
 
-@mixin my-loader{
-  
+.webpage__loader{  
     position:fixed;
     opacity:1;		
     top:50%;
@@ -13,9 +12,35 @@
     align-items: center;
     box-sizing:border-box;
     border-radius:50%;
-    border: 5px solid black;
+    border: 5px solid $purple;
     border-bottom-color: transparent;
     border-right-color:transparent;	  
     animation:spin 1s infinite linear, 
       fadeOut 0.5s 2s linear forwards;
+    
+    &::after{
+      content:"";
+      opacity:1;		
+      top:50%;
+      left:50%;
+      width: 40px;
+      height: 40px;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing:border-box;
+      border-radius:50%;
+      border: 5px solid $pink;
+      border-top-color: transparent;
+      border-left-color:transparent;	  
+      animation:spin 4s infinite , 
+        fadeOut 0.5s 2s linear forwards;
+    }
+}
+
+
+// Load the element of the website
+.loaded {
+  opacity: 0;
+  animation:load_fadeIn 1s ease 2s forwards;
 }

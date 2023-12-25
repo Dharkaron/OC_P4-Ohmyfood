@@ -1,6 +1,8 @@
 @use "Utils" as *;
-@use "Pages" as *;
 @use "Components" as *;
+@use "Layout" as *;
+@use "Pages" as *;
+
 
 
 
@@ -9,165 +11,17 @@
     scroll-behavior: smooth;
 }
 
-
-
 body {
     margin: 0;
     padding: 0;
     min-width: 300px;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;   
 }
 
-
-
-* {
-    font-family: 'roboto', 'shrikhand';
-
-}
-
-h1,h2 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-
-h3{
-    font-size: 18px;
-    font-weight: 700;
-}
-
-
-
-p {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-
-a {
-    text-decoration: none;
-    color: inherit;
-    scroll-snap-type: none;
-    scroll-behavior: smooth;
-    font-size: inherit;
-    font-weight: inherit;
-    
-}
-
-h1,h2,h3,p,a {
-    padding: 0;
-    margin: 0;
-}
-
-ol,ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-
-/***** Heart Animation ************************/
 
 // input hidden
 .hidden{
     display:none;
-}
-
-// Input 'selector/checkbox'
-.heart__like{ 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position: relative;
-    width: 40px;
-    height: 40px;
-
-    // Input check & uncheck 
-    input:checked ~ .heart--regular{
-        opacity:0;
-    }
-    input:checked ~ .heart--solid{
-        opacity:1;
-        animation:fill-in 500ms both;
-    }
-    
-    input:not(:checked) ~ .heart--regular{
-        opacity:1;
-        transition:opacity 200ms;
-    }
-    input:not(:checked) ~ .heart--solid{
-        animation:fill-out 500ms forwards;
-    }
-    
-
-    //  heart position  
-    .fa-heart{
-        display:block;
-        position:absolute;
-    }
-    
-    // hearts styling
-    .heart--regular{
-        transform-origin:center bottom;
-        z-index:2;
-        opacity:1;
-        }
-    .heart--solid{
-        opacity:0;
-        z-index:2;
-        color:transparent;
-        line-height:1;
-        transition:opacity 0ms;
-        background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
-        background-origin:border-box;
-        background-clip:text;
-        filter:drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
-        transform-origin:center bottom;           
-    }   
-}
-
-
-
-
-/** Loader *********************/
-
-/* .webpage__loader{
-    @include my-loader
-}
-
-.loaded {
-    opacity: 0;
-    animation:load_fadeIn 1s ease 2s forwards;
-} */
-
-
-
-/******************** header********************************** */
-
-.headerbar {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
-    height: 63px;
-    margin: 0;
-    box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15);
-    position:sticky;
-    top: 0;
-    background-color: $white;
-    z-index: 3;
-
-    .headerbar__logo {
-        width: 197px;
-        height: 36px;
-        padding-top: 14px;
-    }
-    .headerbar__link {
-        position: absolute;
-        left: 20px;      
-        align-self: center;
-    }
 }
 
 

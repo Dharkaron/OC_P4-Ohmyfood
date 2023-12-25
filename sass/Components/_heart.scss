@@ -1,0 +1,52 @@
+// Input 'selector/checkbox'
+.heart__like{ 
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position: relative;
+  width: 40px;
+  height: 40px;
+
+  // Input check & uncheck 
+  input:checked ~ .heart--regular{
+      opacity:0;
+  }
+  input:checked ~ .heart--solid{
+      opacity:1;
+      animation:fill-in 500ms both;
+  }
+  
+  input:not(:checked) ~ .heart--regular{
+      opacity:1;
+      transition:opacity 200ms;
+  }
+  input:not(:checked) ~ .heart--solid{
+      animation:fill-out 500ms forwards;
+  }
+  
+
+  //  heart position  
+  .fa-heart{
+      display:block;
+      position:absolute;
+  }
+  
+  // hearts styling
+  .heart--regular{
+      transform-origin:center bottom;
+      z-index:2;
+      opacity:1;
+      }
+  .heart--solid{
+      opacity:0;
+      z-index:2;
+      color:transparent;
+      line-height:1;
+      transition:opacity 0ms;
+      background-image:linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(255, 121, 218) 100%);
+      background-origin:border-box;
+      background-clip:text;
+      filter:drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+      transform-origin:center bottom;           
+  }   
+}

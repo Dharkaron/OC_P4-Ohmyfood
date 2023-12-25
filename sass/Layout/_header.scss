@@ -1,0 +1,26 @@
+@use "../Utils" as *;
+
+.headerbar {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 63px;
+  margin: 0;
+  box-shadow:0px 2px 4px rgba(0, 0, 0, 0.15);
+  position:sticky;
+  top: 0;
+  background-color: $white;
+  z-index: 3;
+
+  .headerbar__logo {
+      width: 197px;
+      height: 36px;
+      padding-top: 14px;
+  }
+  .headerbar__link {
+      position: absolute;
+      left: 20px;      
+      align-self: center;
+  }
+}
