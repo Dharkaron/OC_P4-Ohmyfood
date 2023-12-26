@@ -13,7 +13,7 @@
   }
   input:checked ~ .heart--solid{
       opacity:1;
-      animation:fill-in 500ms both;
+      animation:fill-in 500ms ease-in forwards;
   }
   
   input:not(:checked) ~ .heart--regular{
@@ -34,7 +34,7 @@
   // hearts styling
   .heart--regular{
       transform-origin:center bottom;
-      z-index:2;
+      transition: opacity 600ms;     
       opacity:1;
       }
   .heart--solid{

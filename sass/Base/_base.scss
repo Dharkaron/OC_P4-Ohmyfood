@@ -1,0 +1,15 @@
+:root{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  box-sizing: border-box;   
+}
+
+// input hidden for checkbox
+.hidden{
+  display:none;
+}
