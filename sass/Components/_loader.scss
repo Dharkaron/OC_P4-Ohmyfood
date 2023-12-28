@@ -1,11 +1,13 @@
 @use "../Utils" as *;
 
 
+//Styling the loaders
 .webpage__loader{  
     position:fixed;
-    opacity:1;		
-    top:50%;
-    left:50%;
+    opacity:1;
+    //position 50% from the top/left, minus half the height/width of the element.		
+    top:calc(50% - 25px);
+    left:calc(50% - 25px);
     width: 50px;
     height: 50px;
     display:flex;
