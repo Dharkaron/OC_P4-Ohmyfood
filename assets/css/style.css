@@ -535,7 +535,7 @@ body {
   align-self: center;
 }
 
-.location__form {
+.location {
   background-color: #EAEAEA;
   height: 50px;
   margin: 0 auto;
@@ -545,7 +545,7 @@ body {
   align-self: center;
   gap: 17px;
 }
-.location__form__input {
+.location__input {
   font-size: 16px;
   font-weight: 500;
   max-width: 120px;
@@ -555,7 +555,7 @@ body {
   overflow: scroll;
   text-overflow: clip;
 }
-.location__form__input::placeholder {
+.location__input::placeholder {
   font: inherit;
   opacity: 1;
 }
