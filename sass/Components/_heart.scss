@@ -4,6 +4,7 @@
   justify-content:center;
   align-items:center;
   position: relative;
+  z-index: 4;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -40,7 +41,7 @@
       }
   .heart--solid{
       opacity:0;
-      z-index:2;
+      z-index: 4;
       color:transparent;
       line-height:1;
       transition:opacity 0ms;
