@@ -309,9 +309,6 @@ body {
   background-color: #353535;
   padding: 20px 20px 30px 20px;
 }
-.footer a:hover {
-  text-decoration: underline;
-}
 @media (min-width: 1024px) {
   .footer {
     flex-direction: row-reverse;
@@ -320,6 +317,16 @@ body {
     padding: 40px 60px 20px 0px;
     gap: 80px;
   }
+  .footer .footer__links {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .footer .footer__links--bold:nth-child(2) {
+    margin-right: 40px;
+  }
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 .footer__logo {
   width: 139px;
@@ -333,15 +340,14 @@ body {
   align-items: flex-start;
   color: rgb(255, 255, 255);
   gap: 10px;
-}
-@media (min-width: 1024px) {
-  .footer__links {
-    flex-direction: row;
-    align-items: flex-end;
-  }
-  .footer__links--bold:nth-child(2) {
-    margin-right: 30px;
-  }
+  /* @media (min-width:1024px){
+      flex-direction: row;
+      align-items: flex-end;
+
+      &--bold:nth-child(2){
+          margin-right: 30px;
+      }            
+  } */
 }
 .footer__links--bold {
   font-size: 16px;
@@ -529,19 +535,29 @@ body {
   align-self: center;
 }
 
-.location {
+.location__form {
   background-color: #EAEAEA;
+  height: 50px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  align-self: center;
   gap: 17px;
-  margin: 0;
 }
-.location .location__text {
+.location__form__input {
   font-size: 16px;
   font-weight: 500;
-  cursor: default;
+  max-width: 120px;
+  border: none;
+  outline: none;
+  background: inherit;
+  overflow: scroll;
+  text-overflow: clip;
+}
+.location__form__input::placeholder {
+  font: inherit;
+  opacity: 1;
 }
 
 .Hero {
@@ -556,7 +572,7 @@ body {
   text-align: center;
 }
 @media (min-width: 769px) {
-  .Hero .Hero__title {
+  .Hero__title {
     font-size: 40px;
   }
 }
@@ -588,6 +604,9 @@ body {
   .explanation .explanation__flexbox {
     flex-direction: row;
   }
+  .explanation .explanation__flexbox__card {
+    flex: 1 1 30%;
+  }
 }
 .explanation .explanation__flexbox__card {
   position: relative;
@@ -601,6 +620,7 @@ body {
   height: 72px;
   gap: 25px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: default;
 }
 .explanation .explanation__flexbox__card:hover::before {
   opacity: 1;
@@ -617,11 +637,6 @@ body {
   z-index: -1;
   transition: opacity 400ms;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
-}
-@media (min-width: 769px) {
-  .explanation .explanation__flexbox__card {
-    flex: 1 1 30%;
-  }
 }
 .explanation .explanation__flexbox__card__number {
   position: absolute;
@@ -659,6 +674,16 @@ body {
     max-width: 1160px;
     margin: 0 auto;
   }
+  .restaurants .restaurants__flexbox {
+    flex-flow: row wrap;
+    column-gap: 50px;
+    row-gap: 50px;
+  }
+}
+@media (min-width: 769px) and (min-width: 1024px) {
+  .restaurants .restaurants__flexbox {
+    column-gap: 100px;
+  }
 }
 .restaurants__title {
   padding-bottom: 28px;
@@ -667,13 +692,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
-}
-@media (min-width: 769px) {
-  .restaurants__flexbox {
-    flex-flow: row wrap;
-    column-gap: 100px;
-    row-gap: 50px;
-  }
 }
 .restaurants__flexbox__card {
   position: relative;

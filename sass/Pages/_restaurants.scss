@@ -8,8 +8,8 @@
   height: 275px;
   object-fit: cover;
   
-  @media (min-width:769px){
-    height: 383px;
+  @include breakpoint(769){
+    height:383px;
   }
 }
 
@@ -28,7 +28,7 @@
   padding: 50px 50px;
   
 
-  @media (min-width:769px){   
+  @include breakpoint(769){   
     max-width: 1055px;
     margin:-50px auto 0 auto;
     padding: 50px 150px;

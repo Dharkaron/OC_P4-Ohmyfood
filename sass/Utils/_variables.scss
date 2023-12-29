@@ -32,3 +32,10 @@ $white:rgb(255,255,255);
 $btn-background:linear-gradient(0deg, $purple, $pink);
 
 $btn-background--light:linear-gradient(0deg, lighten($purple,4), lighten($pink,4));
+
+
+// Breakpoint values
+
+$breakpoints: (
+    769 : 769px,
+    1024 : 1024px);
