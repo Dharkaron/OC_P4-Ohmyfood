@@ -2,35 +2,29 @@
 
     
 
-.location{
-  background-color: $grey;
-  height: 50px;
-  margin: 0 auto;
+  .location__form{
+    background-color: $grey;
+    height: 50px;
+    margin: 0 auto;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 17px;
+  
+    &__input{
+        font-size:16px;
+        font-weight: 500;
+        border: none;
+        outline: none;
+        background:inherit;
+        width: 115px;   
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-self: center;
-  gap: 17px;
- 
-  &__input{
-      font-size:16px;
-      font-weight: 500;
-      max-width: 120px;
-
-      border: none;
-      outline: none;
-      background: inherit;
-            
-      overflow: scroll;
-      text-overflow: clip;   
-
-      &::placeholder{
-        font: inherit;
-        opacity: 1;
-      }
+        &::placeholder{
+          font: inherit;
+          opacity: 0.6;
+        }
+    }
   }
-}
 
 
 
@@ -60,7 +54,7 @@
 
 
 
-/**************** fonctionnement du site *********************/
+/**************** How to navigate the website *********************/
 
 .explanation {
   box-sizing: border-box;
@@ -71,7 +65,7 @@
 
   @include breakpoint(769){   
       max-width: 1200px;
-      margin:0 auto; 
+      margin:0 auto;
     }
  
   .explanation__title {
@@ -85,12 +79,12 @@
       padding: 0 12px;
       
       @include breakpoint(769) {
-          flex-direction: row;
+        flex-direction: row;
           
-          &__card{
-            flex:1 1 30%;
-          }
-      }    
+        &__card{
+          flex:1 1 30%;
+        }
+      }   
           
       &__card {
           position: relative;
@@ -156,7 +150,7 @@
 
 
 
-/* Cartes de restaurants */
+/* Restaurants Cards */
 
 .section__background--color{
   background-color: $light_grey;   
@@ -257,6 +251,7 @@
                        a::before{
                           content: "";
                           position: absolute;
+                          z-index: 3;
                           top: 0;
                           right: 0;
                           bottom: 0;

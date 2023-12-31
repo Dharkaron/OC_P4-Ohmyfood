@@ -1,44 +1,5 @@
 /**************** Colors ******************/
-* {
-  font-family: "roboto", "shrikhand";
-}
-
-h1, h2, h3, p, a {
-  padding: 0;
-  margin: 0;
-}
-
-h1, h2 {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-p {
-  font-size: 18px;
-  font-weight: 300;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  scroll-snap-type: none;
-  scroll-behavior: smooth;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-ol, ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Carte des menus restaurants */
+/* Restaurant's Menu Cards */
 @keyframes spinningIn {
   0% {
     transform: rotate(360deg);
@@ -108,7 +69,7 @@ ol, ul {
     opacity: 0;
   }
 }
-/* Animation du loader*/
+/* Loader Animation*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -223,6 +184,7 @@ ol, ul {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 4;
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -252,7 +214,7 @@ ol, ul {
 }
 .heart__like .heart--solid {
   opacity: 0;
-  z-index: 2;
+  z-index: 4;
   color: transparent;
   line-height: 1;
   transition: opacity 0ms;
@@ -274,6 +236,45 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  font-family: "roboto", "shrikhand";
+}
+
+h1, h2, h3, p, a {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  scroll-snap-type: none;
+  scroll-behavior: smooth;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol, ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .hidden {
   display: none;
 }
@@ -289,7 +290,7 @@ body {
   position: sticky;
   top: 0;
   background-color: rgb(255, 255, 255);
-  z-index: 3;
+  z-index: 100;
 }
 .headerbar .headerbar__logo {
   width: 197px;
@@ -340,14 +341,6 @@ body {
   align-items: flex-start;
   color: rgb(255, 255, 255);
   gap: 10px;
-  /* @media (min-width:1024px){
-      flex-direction: row;
-      align-items: flex-end;
-
-      &--bold:nth-child(2){
-          margin-right: 30px;
-      }            
-  } */
 }
 .footer__links--bold {
   font-size: 16px;
@@ -364,7 +357,7 @@ body {
   font-weight: 300;
 }
 
-/*************** Image de fond du restaurant **************/
+/*************** Background image of the restaurant **************/
 .background__img {
   width: 100%;
   height: 275px;
@@ -376,7 +369,7 @@ body {
   }
 }
 
-/***** Section affichage du menu *******************/
+/***** Menu section *******************/
 .menu {
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F6;
@@ -396,7 +389,7 @@ body {
   }
 }
 
-/******* Titre principal, restaurant*******/
+/******* Main Title*******/
 .menu__title {
   display: flex;
   flex-direction: row;
@@ -435,7 +428,7 @@ body {
   background: #99E2D0;
 }
 
-/* cartes et leur contenu */
+/* Cards */
 .menu__list {
   display: flex;
   flex-direction: column;
@@ -512,7 +505,7 @@ body {
   animation: spinningIn 700ms 200ms both ease-in;
 }
 
-/* aparition progressive des cartes */
+/* Progressive animation of the cards */
 .dishcard {
   animation: crescendo 800ms linear both;
   opacity: 0;
@@ -530,34 +523,31 @@ body {
   animation-delay: 1200ms;
 }
 
-/* Bouton "Commander" */
+/* Button "Commander" */
 .order__button {
   align-self: center;
 }
 
-.location {
+.location__form {
   background-color: #EAEAEA;
   height: 50px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  align-self: center;
   gap: 17px;
 }
-.location__input {
+.location__form__input {
   font-size: 16px;
   font-weight: 500;
-  max-width: 120px;
   border: none;
   outline: none;
   background: inherit;
-  overflow: scroll;
-  text-overflow: clip;
+  width: 115px;
 }
-.location__input::placeholder {
+.location__form__input::placeholder {
   font: inherit;
-  opacity: 1;
+  opacity: 0.6;
 }
 
 .Hero {
@@ -576,7 +566,7 @@ body {
     font-size: 40px;
   }
 }
-/**************** fonctionnement du site *********************/
+/**************** How to navigate the website *********************/
 .explanation {
   box-sizing: border-box;
   display: flex;
@@ -661,7 +651,7 @@ body {
   font-weight: 500;
 }
 
-/* Cartes de restaurants */
+/* Restaurants Cards */
 .section__background--color {
   background-color: #F6F6F6;
 }
@@ -758,6 +748,7 @@ body {
 .restaurants__flexbox__card__content__text a::before {
   content: "";
   position: absolute;
+  z-index: 3;
   top: 0;
   right: 0;
   bottom: 0;
