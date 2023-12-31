@@ -1,5 +1,5 @@
 /**************** Colors ******************/
-/* Carte des menus restaurants */
+/* Restaurant's Menu Cards */
 @keyframes spinningIn {
   0% {
     transform: rotate(360deg);
@@ -69,7 +69,7 @@
     opacity: 0;
   }
 }
-/* Animation du loader*/
+/* Loader Animation*/
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -357,7 +357,7 @@ ol, ul {
   font-weight: 300;
 }
 
-/*************** Image de fond du restaurant **************/
+/*************** Background image of the restaurant **************/
 .background__img {
   width: 100%;
   height: 275px;
@@ -369,7 +369,7 @@ ol, ul {
   }
 }
 
-/***** Section affichage du menu *******************/
+/***** Menu section *******************/
 .menu {
   border-radius: 30px 30px 0 0;
   background-color: #F6F6F6;
@@ -389,7 +389,7 @@ ol, ul {
   }
 }
 
-/******* Titre principal, restaurant*******/
+/******* Main Title*******/
 .menu__title {
   display: flex;
   flex-direction: row;
@@ -428,7 +428,7 @@ ol, ul {
   background: #99E2D0;
 }
 
-/* cartes et leur contenu */
+/* Cards */
 .menu__list {
   display: flex;
   flex-direction: column;
@@ -505,7 +505,7 @@ ol, ul {
   animation: spinningIn 700ms 200ms both ease-in;
 }
 
-/* aparition progressive des cartes */
+/* Progressive animation of the cards */
 .dishcard {
   animation: crescendo 800ms linear both;
   opacity: 0;
@@ -523,7 +523,7 @@ ol, ul {
   animation-delay: 1200ms;
 }
 
-/* Bouton "Commander" */
+/* Button "Commander" */
 .order__button {
   align-self: center;
 }
@@ -543,7 +543,7 @@ ol, ul {
   border: none;
   outline: none;
   background: inherit;
-  text-overflow: clip;
+  width: 115px;
 }
 .location__form__input::placeholder {
   font: inherit;
@@ -566,7 +566,7 @@ ol, ul {
     font-size: 40px;
   }
 }
-/**************** fonctionnement du site *********************/
+/**************** How to navigate the website *********************/
 .explanation {
   box-sizing: border-box;
   display: flex;
@@ -651,7 +651,7 @@ ol, ul {
   font-weight: 500;
 }
 
-/* Cartes de restaurants */
+/* Restaurants Cards */
 .section__background--color {
   background-color: #F6F6F6;
 }

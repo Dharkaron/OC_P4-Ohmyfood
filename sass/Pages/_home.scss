@@ -16,8 +16,8 @@
         font-weight: 500;
         border: none;
         outline: none;
-        background:inherit;              
-        text-overflow:clip;   
+        background:inherit;
+        width: 115px;   
 
         &::placeholder{
           font: inherit;
@@ -54,7 +54,7 @@
 
 
 
-/**************** fonctionnement du site *********************/
+/**************** How to navigate the website *********************/
 
 .explanation {
   box-sizing: border-box;
@@ -150,7 +150,7 @@
 
 
 
-/* Cartes de restaurants */
+/* Restaurants Cards */
 
 .section__background--color{
   background-color: $light_grey;   
